@@ -4,629 +4,536 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Cat Father 🐱</title>
+<title>The Cat Father 𑣲 | Pet Shop</title>
+
+<meta name="description"
+content="The Cat Father 𑣲 - Pet products and cat care">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
 
-html{
-  scroll-behavior:smooth;
+*{
+    box-sizing:border-box;
 }
 
 body{
-  font-family:Arial, sans-serif;
-  background:#f7f7f7;
-  color:#222;
+    margin:0;
+    font-family:Arial,"Noto Sans Bengali",sans-serif;
+    background:#fffaf7;
+    color:#222;
 }
 
 header{
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:#111;
-  padding:16px 7%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#fff;
+    border-bottom:1px solid #eee;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 5%;
+    box-shadow:0 2px 10px #0000000d;
 }
 
 .logo{
-  color:#fff;
-  font-size:24px;
-  font-weight:bold;
+    font-weight:800;
+    font-size:22px;
+}
+
+.logo span{
+    font-size:14px;
+    color:#ff6b35;
 }
 
 nav a{
-  color:#fff;
-  text-decoration:none;
-  margin-left:18px;
-  font-size:14px;
-}
-
-nav a:hover{
-  color:#ffb52e;
+    margin-left:16px;
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
 }
 
 .hero{
-  min-height:580px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:40px 20px;
-  color:#fff;
-
-  background:
-  linear-gradient(#0009,#0009),
-  url("https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1600&q=85")
-  center/cover;
+    padding:65px 5%;
+    text-align:center;
+    background:linear-gradient(135deg,#fff0e9,#fff);
 }
 
 .hero h1{
-  font-size:58px;
-  margin-bottom:15px;
+    font-size:42px;
+    margin:0 0 12px;
 }
 
 .hero p{
-  font-size:21px;
-  margin-bottom:28px;
+    font-size:18px;
+    color:#666;
+    max-width:650px;
+    margin:0 auto 22px;
 }
 
 .btn{
-  display:inline-block;
-  padding:13px 25px;
-  margin:5px;
-  border-radius:30px;
-  background:#ffb52e;
-  color:#111;
-  text-decoration:none;
-  font-weight:bold;
+    display:inline-block;
+    border:0;
+    border-radius:12px;
+    padding:12px 18px;
+    background:#ff6b35;
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    cursor:pointer;
 }
 
 .btn:hover{
-  transform:scale(1.04);
+    background:#e95625;
 }
 
-section{
-  padding:70px 7%;
+.section{
+    padding:45px 5%;
+    max-width:1200px;
+    margin:auto;
 }
 
-.title{
-  text-align:center;
-  margin-bottom:40px;
+.section h2{
+    text-align:center;
+    margin:0 0 25px;
 }
 
-.title h2{
-  font-size:36px;
-  margin-bottom:10px;
-}
-
-.title p{
-  color:#666;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:25px;
+.products{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
 }
 
 .card{
-  background:#fff;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 5px 25px #0002;
-  transition:.3s;
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 20px #00000012;
+    border:1px solid #eee;
+    transition:.2s;
 }
 
 .card:hover{
-  transform:translateY(-7px);
+    transform:translateY(-4px);
 }
 
 .card img{
-  width:100%;
-  height:230px;
-  object-fit:cover;
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    background:#f2f2f2;
 }
 
-.card-content{
-  padding:20px;
+.card-body{
+    padding:16px;
 }
 
-.card-content h3{
-  margin-bottom:10px;
-  font-size:21px;
+.card h3{
+    margin:0 0 8px;
+    font-size:20px;
 }
 
-.card-content p{
-  color:#666;
-  line-height:1.6;
+.desc{
+    color:#666;
+    min-height:40px;
+    line-height:1.5;
 }
 
 .price{
-  font-size:20px;
-  font-weight:bold;
-  margin:15px 0;
+    font-size:21px;
+    font-weight:800;
+    margin:12px 0;
+    color:#ff5b28;
 }
 
-.adoption{
-  background:#fff3d7;
-}
-
-.campaign{
-  background:#151515;
-  color:white;
-}
-
-.campaign .title p{
-  color:#ccc;
-}
-
-.campaign-box{
-  max-width:800px;
-  margin:auto;
-  text-align:center;
-  padding:35px;
-  border-radius:20px;
-  background:#222;
-}
-
-.campaign-box h3{
-  font-size:28px;
-  margin-bottom:15px;
-}
-
-.campaign-box p{
-  line-height:1.8;
-  color:#ddd;
-}
-
-.gallery{
-  background:#fff;
-}
-
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
-}
-
-.gallery-grid img{
-  width:100%;
-  height:250px;
-  object-fit:cover;
-  border-radius:16px;
-  transition:.3s;
-}
-
-.gallery-grid img:hover{
-  transform:scale(1.03);
-}
-
-.contact{
-  text-align:center;
+.empty{
+    text-align:center;
+    color:#777;
+    padding:35px;
+    background:#fff;
+    border-radius:16px;
 }
 
 .contact-box{
-  max-width:700px;
-  margin:auto;
-  background:#fff;
-  padding:40px 20px;
-  border-radius:20px;
-  box-shadow:0 5px 25px #0002;
-}
-
-.social{
-  margin-top:25px;
-}
-
-.social a{
-  display:inline-block;
-  margin:7px;
-  padding:13px 23px;
-  border-radius:30px;
-  background:#ffb52e;
-  color:#111;
-  text-decoration:none;
-  font-weight:bold;
+    text-align:center;
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 5px 20px #0000000d;
 }
 
 footer{
-  background:#111;
-  color:#fff;
-  text-align:center;
-  padding:35px 20px;
-}
-
-footer p{
-  margin-top:8px;
-  color:#aaa;
-}
-
-@media(max-width:700px){
-
-  header{
-    flex-direction:column;
-    gap:12px;
-  }
-
-  nav{
     text-align:center;
-  }
-
-  nav a{
-    display:inline-block;
-    margin:5px;
-  }
-
-  .hero{
-    min-height:500px;
-  }
-
-  .hero h1{
-    font-size:40px;
-  }
-
-  .hero p{
-    font-size:17px;
-  }
-
-  section{
-    padding:50px 5%;
-  }
-
-  .title h2{
-    font-size:30px;
-  }
+    padding:30px;
+    background:#222;
+    color:#fff;
+    margin-top:30px;
 }
+
+@media(max-width:650px){
+
+    .hero h1{
+        font-size:31px;
+    }
+
+    nav a{
+        margin-left:8px;
+        font-size:14px;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+}
+
 </style>
 </head>
 
 
 <body>
 
-<!-- HEADER -->
-
 <header>
 
-<div class="logo">
-🐾 The Cat Father
-</div>
+    <div class="logo">
+        🐾 The Cat Father <span>𑣲</span>
+    </div>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#shop">Shop</a>
-<a href="#adoption">Adoption</a>
-<a href="#campaign">Campaign</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <a href="admin.html">Admin</a>
+    </nav>
 
 </header>
 
 
-<!-- HOME -->
+<section class="hero">
 
-<section class="hero" id="home">
+    <h1>
+        Welcome to The Cat Father 𑣲
+    </h1>
 
-<div>
+    <p>
+        বিড়াল ও পোষা প্রাণীর জন্য পছন্দের
+        পণ্য এক জায়গায়।
+        পণ্য দেখুন এবং সরাসরি অর্ডার করুন।
+    </p>
 
-<h1>The Cat Father 🐱</h1>
-
-<p>
-For the love of cats ❤️
-</p>
-
-<a class="btn" href="#adoption">
-🏡 Adopt a Cat
-</a>
-
-<a class="btn" href="#shop">
-🛒 Visit Shop
-</a>
-
-</div>
+    <a class="btn" href="#products">
+        🛍️ প্রোডাক্ট দেখুন
+    </a>
 
 </section>
 
 
-<!-- SHOP -->
+<section class="section" id="products">
 
-<section id="shop">
+    <h2>
+        🐱 আমাদের প্রোডাক্ট
+    </h2>
 
-<div class="title">
-
-<h2>🛒 Pet Shop</h2>
-
-<p>
-আপনার প্রিয় বিড়ালের জন্য প্রয়োজনীয় সবকিছু
-</p>
-
-</div>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=800&q=85">
-
-<div class="card-content">
-
-<h3>🐱 Cat Food</h3>
-
-<p>
-বিড়ালের জন্য প্রয়োজনীয় খাবার।
-</p>
-
-<div class="price">
-৳ 000
-</div>
-
-<a class="btn" href="#contact">
-Order
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1545249390-6bdfa286032f?auto=format&fit=crop&w=800&q=85">
-
-<div class="card-content">
-
-<h3>🧺 Cat Litter</h3>
-
-<p>
-আপনার বিড়ালের জন্য পরিষ্কার ও আরামদায়ক litter।
-</p>
-
-<div class="price">
-৳ 000
-</div>
-
-<a class="btn" href="#contact">
-Order
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=800&q=85">
-
-<div class="card-content">
-
-<h3>🧸 Cat Toys</h3>
-
-<p>
-বিড়ালের আনন্দের জন্য বিভিন্ন ধরনের toys।
-</p>
-
-<div class="price">
-৳ 000
-</div>
-
-<a class="btn" href="#contact">
-Order
-</a>
-
-</div>
-
-</div>
-
-
-</div>
+    <div id="productGrid" class="products"></div>
 
 </section>
 
 
-<!-- ADOPTION -->
+<section class="section" id="contact">
 
-<section class="adoption" id="adoption">
+    <div class="contact-box">
 
-<div class="title">
+        <h2>
+            📞 যোগাযোগ
+        </h2>
 
-<h2>🏡 Cat Adoption</h2>
+        <p>
+            অর্ডার করতে আপনার পছন্দের
+            প্রোডাক্টের
+            <b>অর্ডার নিন</b>
+            বাটনে চাপ দিন।
+        </p>
 
-<p>
-একটি বিড়ালকে ভালোবাসার একটি পরিবার দিন ❤️
-</p>
-
-</div>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=800&q=85">
-
-<div class="card-content">
-
-<h3>🐈 Adoption Cat</h3>
-
-<p>
-Adoption-এর জন্য বিড়ালের বিস্তারিত জানতে আমাদের সাথে যোগাযোগ করুন।
-</p>
-
-<a class="btn" href="#contact">
-Adopt Now
-</a>
-
-</div>
-
-</div>
-
-
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=800&q=85">
-
-<div class="card-content">
-
-<h3>❤️ Loving Home</h3>
-
-<p>
-আপনার কাছে থাকা বিড়াল adoption দিতে চাইলে আমাদের সাথে যোগাযোগ করুন।
-</p>
-
-<a class="btn" href="#contact">
-Contact
-</a>
-
-</div>
-
-</div>
-
-
-</div>
+    </div>
 
 </section>
 
-
-<!-- CAMPAIGN -->
-
-<section class="campaign" id="campaign">
-
-<div class="title">
-
-<h2>🏆 Cat Photo Campaign</h2>
-
-<p>
-The Cat Father-এর Campaign ও Contest
-</p>
-
-</div>
-
-
-<div class="campaign-box">
-
-<h3>
-🐾 Campaign No. 2
-</h3>
-
-<p>
-Campaign post-টি ২ বার Share করুন এবং তারপর Comment করুন।
-<br><br>
-নিয়ম অনুযায়ী যারা অংশগ্রহণ করবেন তাদের মধ্য থেকে Winner নির্বাচন করা হবে।
-</p>
-
-<a class="btn" href="https://www.facebook.com/profile.php?id=61591865408771" target="_blank">
-Join Campaign
-</a>
-
-</div>
-
-</section>
-
-
-<!-- GALLERY -->
-
-<section class="gallery" id="gallery">
-
-<div class="title">
-
-<h2>📸 Cat Gallery</h2>
-
-<p>
-The Cat Father পরিবারের সুন্দর মুহূর্তগুলো
-</p>
-
-</div>
-
-
-<div class="gallery-grid">
-
-<img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=800&q=85">
-
-<img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=800&q=85">
-
-<img src="https://images.unsplash.com/photo-1513245543132-31f507417b26?auto=format&fit=crop&w=800&q=85">
-
-<img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=800&q=85">
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<div class="title">
-
-<h2>📞 Contact Us</h2>
-
-<p>
-Cat, Adoption, Products অথবা Campaign সম্পর্কে জানতে যোগাযোগ করুন।
-</p>
-
-</div>
-
-
-<div class="contact-box">
-
-<h3>
-🐾 The Cat Father
-</h3>
-
-<p style="margin-top:10px">
-For the love of cats ❤️
-</p>
-
-
-<div class="social">
-
-<a href="https://www.facebook.com/profile.php?id=61591865408771" target="_blank">
-📘 Facebook Page
-</a>
-
-<a href="https://m.me/61591865408771" target="_blank">
-💬 Messenger
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
 
 <footer>
 
-<h3>
-🐾 The Cat Father
-</h3>
+    © <span id="year"></span>
+    The Cat Father 𑣲
 
-<p>
-Made with ❤️ for cats
-</p>
+    <br>
 
-<p>
-© 2026 The Cat Father. All Rights Reserved.
-</p>
+    All Rights Reserved.
 
 </footer>
 
 
+<script>
+
+/* ==============================
+   YOUR WHATSAPP NUMBER
+   ============================== */
+
+const WHATSAPP_NUMBER = "8801334999933";
+
+
+/* ==============================
+   PRODUCT STORAGE
+   ============================== */
+
+const STORAGE_KEY = "catfather_products_v1";
+
+
+/* ==============================
+   DEFAULT PRODUCT
+   ============================== */
+
+const defaultProducts = [
+
+    {
+        id:"demo1",
+
+        name:"Cat Food",
+
+        price:"500",
+
+        image:
+        "https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=900&q=80",
+
+        description:
+        "আপনার নিজের প্রোডাক্ট এখানে যোগ করুন।"
+    }
+
+];
+
+
+/* ==============================
+   GET PRODUCTS
+   ============================== */
+
+function getProducts(){
+
+    const saved =
+        localStorage.getItem(STORAGE_KEY);
+
+    if(saved !== null){
+
+        return JSON.parse(saved);
+
+    }
+
+    localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify(defaultProducts)
+    );
+
+    return defaultProducts;
+
+}
+
+
+/* ==============================
+   ORDER PRODUCT
+   ============================== */
+
+function orderProduct(product){
+
+    const message =
+
+`Assalamu Alaikum,
+আমি "${product.name}" অর্ডার করতে চাই।
+
+দাম: ৳${product.price}
+
+The Cat Father 𑣲`;
+
+
+    const whatsappURL =
+
+        `https://wa.me/${WHATSAPP_NUMBER}?text=`
+        +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+
+/* ==============================
+   SHOW PRODUCTS
+   ============================== */
+
+function renderProducts(){
+
+    const grid =
+        document.getElementById(
+            "productGrid"
+        );
+
+    const products =
+        getProducts();
+
+
+    if(!products.length){
+
+        grid.innerHTML = `
+
+            <div
+                class="empty"
+                style="grid-column:1/-1"
+            >
+
+                এখনো কোনো প্রোডাক্ট
+                যোগ করা হয়নি।
+
+                <br><br>
+
+                Admin থেকে
+                প্রোডাক্ট যোগ করুন।
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    grid.innerHTML =
+
+        products.map(
+
+            product => `
+
+                <article class="card">
+
+                    <img
+
+                        src="${escapeHtml(
+                            product.image
+                        )}"
+
+                        alt="${escapeHtml(
+                            product.name
+                        )}"
+
+                        onerror="
+                            this.src=
+                            'https://via.placeholder.com/900x600?text=The+Cat+Father'
+                        "
+
+                    >
+
+
+                    <div class="card-body">
+
+                        <h3>
+                            ${escapeHtml(
+                                product.name
+                            )}
+                        </h3>
+
+
+                        <div class="desc">
+
+                            ${escapeHtml(
+                                product.description || ""
+                            )}
+
+                        </div>
+
+
+                        <div class="price">
+
+                            ৳${escapeHtml(
+                                product.price
+                            )}
+
+                        </div>
+
+
+                        <button
+
+                            class="btn"
+
+                            onclick='
+                                orderProduct(
+                                    ${JSON.stringify(product)}
+                                )
+                            '
+
+                        >
+
+                            🛒 অর্ডার নিন
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            `
+
+        ).join("");
+
+}
+
+
+/* ==============================
+   SECURITY
+   ============================== */
+
+function escapeHtml(value){
+
+    return String(value ?? "")
+
+        .replace(
+            /[&<>"']/g,
+
+            function(match){
+
+                return {
+
+                    "&":"&amp;",
+                    "<":"&lt;",
+                    ">":"&gt;",
+                    '"':"&quot;",
+                    "'":"&#039;"
+
+                }[match];
+
+            }
+
+        );
+
+}
+
+
+/* ==============================
+   YEAR
+   ============================== */
+
+document.getElementById(
+    "year"
+).textContent =
+    new Date().getFullYear();
+
+
+/* ==============================
+   START
+   ============================== */
+
+renderProducts();
+
+</script>
+
+
 </body>
-</html>
+</html>z
